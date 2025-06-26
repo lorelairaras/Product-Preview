@@ -1,0 +1,158 @@
+:root {
+  /* Primary */
+  --Green500: hsl(158, 36%, 37%);
+  --Green700: hsl(158, 42%, 18%);
+
+  /* Neutral */
+  --Black: hsl(212, 21%, 14%);
+  --Grey: hsl(228, 12%, 48%);
+  --Cream: hsl(30, 38%, 92%);
+  --White: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", "Fraunces";
+}
+
+body {
+  background-color: var(--Cream);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.product-card {
+  background-color: var(--White);
+  width: 90%;
+  max-width: 600px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 20px 0;
+}
+
+.product-image {
+  width: 100%;
+  display: block;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.product-image img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.product-info {
+  padding: 20px;
+}
+
+h1 {
+  font-family: "Fraunces";
+  font-size: 5vh;
+  color: var(--Black);
+  padding: 5px 0px;
+}
+
+h2 {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 1.5vh;
+  letter-spacing: 1vh;
+  padding: 10px 0px;
+  text-transform: uppercase;
+  color: var(--Grey);
+  padding: 5px 0px;
+}
+
+p {
+  font-size: 2.3vh;
+  color: var(--Grey);
+  padding: 5px 0px;
+}
+
+.price-container {
+  display: flex;
+  align-items: center;
+  margin: 0 0 20px 0;
+  padding: 5px 0px;
+}
+
+.current-price {
+  font-family: "Fraunces";
+  color: var(--Green500);
+  font-size: 3vh;
+  font-weight: 700;
+  margin-right: 20px;
+}
+
+.original-price {
+  color: var(--Grey);
+  font-size: 14px;
+  text-decoration: line-through;
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  width: 20%;
+  padding: 10px;
+  background-color: var(--Green500);
+}
+
+button:hover {
+  background-color: var(--Green700);
+}
+
+.add-to-cart {
+  width: 100%;
+  background-color: hsl(158, 36%, 37%);
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-to-cart:hover {
+  background-color: hsl(158, 36%, 20%);
+}
+
+@media only screen and (min-width: 600px) {
+  .product-card {
+    display: flex;
+    max-width: 600px;
+  }
+
+  .product-image {
+    width: 50%;
+  }
+
+  .product-image img {
+    height: 100%;
+  }
+
+  .product-info {
+    width: 50%;
+    padding: 32px;
+  }
+
+  .product-name {
+    font-size: 32px;
+    margin-bottom: 24px;
+  }
+
+  .current-price {
+    font-size: 32px;
+  }
+}
